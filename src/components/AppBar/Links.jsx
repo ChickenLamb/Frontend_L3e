@@ -8,7 +8,7 @@ const preventDefault = (event) => event.preventDefault();
 export default function Links(props) {
   return (
     <Box sx={{ mr: 5 }} onClick={preventDefault}>
-      <Link color="inherit" href={props.link}>
+      <Link color="inherit" href={props.link} component={props.component}>
         {props.name}
       </Link>
     </Box>

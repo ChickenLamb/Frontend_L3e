@@ -18,7 +18,7 @@ export function Body() {
       <Item>1</Item>
       <Item>2</Item>
       <Item>3</Item>
-      <p>Classroom</p>
+      <p>Settings</p>
     </Box>
   );
 }
