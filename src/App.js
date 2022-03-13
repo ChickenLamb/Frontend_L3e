@@ -35,6 +35,7 @@ export default function App() {
       <nav>
         <HideAppBar somProp={pages} logo={logo} logoTitle="L3Education" />
       </nav>
+      <br />
       <Routes>
         <Route index element={<Mainpage />} />
         <Route path="Home" element={<Home />} />
