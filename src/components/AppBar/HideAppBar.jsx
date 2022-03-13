@@ -53,13 +53,20 @@ export default function HideAppBar(props) {
                   }}
                 >
                   <span>&nbsp;&nbsp;&nbsp;&nbsp;</span>
-                  <img
-                    id="logo"
-                    src={props.logo}
-                    width="auto"
-                    height="30px"
-                    alt="logo"
-                  ></img>
+                  <NavLink
+                    to="/"
+                    style={(isActive) => ({
+                      color: "inherit"
+                    })}
+                  >
+                    <img
+                      id="logo"
+                      src={props.logo}
+                      width="auto"
+                      height="30px"
+                      alt="logo"
+                    ></img>
+                  </NavLink>
                   <span>&nbsp;&nbsp;</span>
                   <Typography align="left" variant="h6">
                     {props.logoTitle}
