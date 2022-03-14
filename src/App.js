@@ -1,6 +1,6 @@
 import { Body as Classroom } from "./pages/Classroom/Body";
-import { Body as Settings } from "./pages/Settings/Body";
-import { Body as Subscriptions } from "./pages/Subscriptions/Body";
+import Settings from "./pages/Settings/Body";
+import Subscriptions from "./pages/Subscriptions/Body";
 import Home from "./pages/Home/Body";
 import { Body as Mainpage } from "./pages/Mainpage/Body";
 import logo from "./assets/logo.png";

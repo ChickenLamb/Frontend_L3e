@@ -64,7 +64,7 @@ export const Profileboard = React.memo(function ProfileCard(props) {
   return (
     <Card className={cx(styles.card, shadowStyles.root)}>
       <CardContent>
-        <Avatar className={styles.avatar} src={"https://i.pravatar.cc/300"} />
+        <Avatar className={styles.avatar} src={props.image} />
         <h3 className={styles.heading}>{props.name}</h3>
         <span className={styles.subheader}>{props.desciption}</span>
         <br />

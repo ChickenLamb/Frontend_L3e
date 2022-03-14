@@ -7,18 +7,25 @@ import Grid from "@mui/material/Grid";
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
-  padding: theme.spacing(1),
   textAlign: "center",
+  borderRadius: 12,
   color: theme.palette.text.secondary
 }));
 
-export function Body() {
+export default function Body() {
   return (
-    <Box sx={{ display: "grid", gridTemplateRows: "repeat(3, 1fr)" }}>
-      <Item>1</Item>
-      <Item>2</Item>
-      <Item>3</Item>
-      <p>Subscriptions</p>
+    <Box sx={{ flexGrow: 1 }}>
+      <Grid container spacing={2}>
+        <Grid item xs={12} sm={6} md={4}>
+          <Item></Item>
+        </Grid>
+        <Grid item xs={12} sm={6} md={8}>
+          <Item></Item>
+        </Grid>
+        <Grid item xs={12}>
+          <Item></Item>
+        </Grid>
+      </Grid>
     </Box>
   );
 }
