@@ -7,7 +7,6 @@ import CardContent from "@material-ui/core/CardContent";
 import Avatar from "@material-ui/core/Avatar";
 import Divider from "@material-ui/core/Divider";
 import Button from "@material-ui/core/Button";
-import { useFadedShadowStyles } from "@mui-treasury/styles/shadow/faded";
 import { useGutterBorderedGridStyles } from "@mui-treasury/styles/grid/gutterBordered";
 
 const useStyles = makeStyles(({ palette }) => ({
@@ -56,13 +55,12 @@ const useStyles = makeStyles(({ palette }) => ({
 
 export const Profileboard = React.memo(function ProfileCard(props) {
   const styles = useStyles();
-  const shadowStyles = useFadedShadowStyles();
   const borderedGridStyles = useGutterBorderedGridStyles({
     borderColor: "rgba(0, 0, 0, 0.08)",
     height: "50%"
   });
   return (
-    <Card className={cx(styles.card, shadowStyles.root)}>
+    <Card className={cx(styles.card)}>
       <CardContent>
         <Avatar className={styles.avatar} src={props.image} />
         <h3 className={styles.heading}>{props.name}</h3>
