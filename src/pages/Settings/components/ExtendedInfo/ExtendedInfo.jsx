@@ -43,7 +43,14 @@ export default function ExtendedInfo(props) {
     setParentPhoneValue(event.target.value);
   };
   return (
-    <Box sx={{ flexGrow: 1 }} component="form" noValidate autoComplete="off">
+    <Box
+      sx={{ flexGrow: 1 }}
+      mb={1}
+      pb={3}
+      component="form"
+      noValidate
+      autoComplete="off"
+    >
       <Grid container spacing={1} columns={16}>
         <Grid item xs={16}>
           <Item elevation={0}>

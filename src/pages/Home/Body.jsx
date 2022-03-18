@@ -26,6 +26,7 @@ export default function Body() {
               name="趙曉文"
               desciption="夢裡出現的人，醒來就應該去見他，生活就是怎麼簡單。"
               image={Image}
+              email={"test@gmail.com"}
             />
           </Item>
         </Grid>

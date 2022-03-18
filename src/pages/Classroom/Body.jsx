@@ -16,34 +16,60 @@ const Item = styled(Paper)(({ theme }) => ({
 const mycourses = [
   {
     title: "高二 化学（中）",
-    desciption:
-      "Lizards are a widespread group of squamate reptiles, with over 6,000" +
-      "species, ranging across all continents except Antarctica"
+    link: "#",
+    time: "1730"
   },
 
   {
-    title: "初二 数学 （概念课）",
-    desciption:
-      "Lizards are a widespread group of squamate reptiles, with over 6,000" +
-      "species, ranging across all continents except Antarctica"
+    title: "高二 化学（中）",
+    link: "#",
+    time: "none"
   },
   {
-    title: "文化與藝術",
-    desciption:
-      "Lizards are a widespread group of squamate reptiles, with over 6,000" +
-      "species, ranging across all continents except Antarctica"
+    title: "高二 化学（中）",
+    link: "#",
+    time: "none"
   },
   {
-    title: "地理",
-    desciption:
-      "Lizards are a widespread group of squamate reptiles, with over 6,000" +
-      "species, ranging across all continents except Antarctica"
+    title: "高二 化学（中）",
+    link: "#",
+    time: "none"
+  },
+  {
+    title: "高二 化学（中）",
+    link: "#",
+    time: "none"
+  },
+  {
+    title: "高二 化学（中）",
+    link: "#",
+    time: "none"
+  },
+  {
+    title: "高二 化学（中）",
+    link: "#",
+    time: "none"
+  },
+  {
+    title: "高二 化学（中）",
+    link: "#",
+    time: "none"
+  },
+  {
+    title: "高二 化学（中）",
+    link: "#",
+    time: "none"
+  },
+  {
+    title: "高二 化学（中）",
+    link: "#",
+    time: "none"
   }
 ];
 
 export function Body() {
   return (
-    <Box sx={{ flexGrow: 1, marginLeft: 3 }}>
+    <Box sx={{ flexGrow: 1, marginLeft: 1 }}>
       <Grid
         container
         spacing={{ xs: 2, md: 3 }}
@@ -53,7 +79,8 @@ export function Body() {
           <Grid item xs={2} sm={4} md={4} key={index}>
             <Classcard
               title={item.title}
-              description={item.desciption}
+              link={item.link}
+              time={item.time}
               image="https://i.pravatar.cc/300"
             />
           </Grid>

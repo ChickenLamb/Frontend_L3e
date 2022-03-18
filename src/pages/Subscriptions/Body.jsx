@@ -3,7 +3,8 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
-
+import Searchboard from "./components/Searchboard/Searchboard";
+import Coursescard from "./components/Coursescard";
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
@@ -11,19 +12,85 @@ const Item = styled(Paper)(({ theme }) => ({
   borderRadius: 12,
   color: theme.palette.text.secondary
 }));
+const allcourses = [
+  {
+    title: "高二 化学（中）",
+    link: "#",
+    image: "https://i.pravatar.cc/300",
+    time: "none"
+  },
 
+  {
+    title: "高二 化学（中）",
+    link: "#",
+    image: "https://i.pravatar.cc/300",
+    time: "none"
+  },
+  {
+    title: "高二 化学（中）",
+    link: "#",
+    image: "https://i.pravatar.cc/300",
+    time: "none"
+  },
+  {
+    title: "高二 化学（中）",
+    link: "#",
+    image: "https://i.pravatar.cc/300",
+    time: "none"
+  },
+  {
+    title: "高二 化学（中）",
+    link: "#",
+    image: "https://i.pravatar.cc/300",
+    time: "none"
+  },
+  {
+    title: "高二 化学（中）",
+    link: "#",
+    image: "https://i.pravatar.cc/300",
+    time: "none"
+  },
+  {
+    title: "高二 化学（中）",
+    link: "#",
+    image: "https://i.pravatar.cc/300",
+    time: "none"
+  },
+  {
+    title: "高二 化学（中）",
+    link: "#",
+    image: "https://i.pravatar.cc/300",
+    time: "none"
+  }
+];
 export default function Body() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <Grid container spacing={2}>
-        <Grid item xs={12} sm={6} md={4}>
-          <Item></Item>
+    <Box sx={{ flexGrow: 1, marginLeft: 1 }}>
+      <Grid
+        container
+        spacing={{ xs: 2, md: 3 }}
+        columns={{ xs: 4, sm: 12, md: 16 }}
+      >
+        <Grid item xs={4} sm={12} md={16}>
+          <Item>
+            <Searchboard />
+          </Item>
         </Grid>
-        <Grid item xs={12} sm={6} md={8}>
-          <Item></Item>
-        </Grid>
+        {allcourses.map((item, index) => (
+          <Grid item xs={2} sm={4} md={4} key={index}>
+            <Item>
+              <Coursescard
+                title={item.title}
+                link={item.link}
+                image={item.image}
+                time={item.time}
+              />
+            </Item>
+          </Grid>
+        ))}
+
         <Grid item xs={12}>
-          <Item></Item>
+          <Item>g</Item>
         </Grid>
       </Grid>
     </Box>

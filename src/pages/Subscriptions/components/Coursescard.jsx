@@ -17,7 +17,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary
 }));
 
-export default function Classcard(props) {
+export default function Coursescard(props) {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
@@ -36,7 +36,7 @@ export default function Classcard(props) {
       </CardContent>
       <CardActions>
         <Stack sx={{ m: "auto" }} direction="column" spacing={3}>
-          <Item elevation={0}>class showing now{props.time}</Item>
+          <Item elevation={0}>Not subscribe Yet</Item>
           <Item>
             <Button size="small">go to classroom{props.link}</Button>
           </Item>

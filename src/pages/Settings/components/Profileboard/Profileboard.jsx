@@ -16,7 +16,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function Profileboard(props) {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1 }} p={3}>
       <Grid columns={17} container spacing={0}>
         <Grid xs={17} m={1}>
           Profile Settings

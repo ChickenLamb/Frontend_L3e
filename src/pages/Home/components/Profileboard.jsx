@@ -71,11 +71,11 @@ export const Profileboard = React.memo(function ProfileCard(props) {
       <Divider light />
       <Box display={"flex"}>
         <Box p={2} flex={"auto"} className={borderedGridStyles.item}>
-          <p className={styles.statLabel}>Followers</p>
-          <p className={styles.statValue}>6941</p>
+          <p className={styles.statLabel}>Email</p>
+          <p className={styles.statValue}>{props.email}</p>
         </Box>
         <Box p={2} flex={"auto"} className={borderedGridStyles.item}>
-          <p className={styles.statLabel}>Following</p>
+          <p className={styles.statLabel}>Like</p>
           <p className={styles.statValue}>12</p>
         </Box>
       </Box>
