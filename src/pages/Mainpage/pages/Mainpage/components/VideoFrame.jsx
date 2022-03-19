@@ -26,7 +26,7 @@ export default function VideoFrame() {
             <source srcSet={LogoWebp} type="image/webp" />
             <img
               width="auto"
-              height="50vh"
+              height="150vh"
               src={LogoJpeg}
               type="image/jpeg"
               alt="mainpage_logo"
