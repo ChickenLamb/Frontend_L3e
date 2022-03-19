@@ -67,7 +67,7 @@ const mycourses = [
   }
 ];
 
-export function Body() {
+export default function Body() {
   return (
     <Box sx={{ flexGrow: 1, marginLeft: 1 }}>
       <Grid
