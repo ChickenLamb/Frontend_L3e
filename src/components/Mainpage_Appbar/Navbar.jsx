@@ -31,3 +31,4 @@ export default function Navbar(props) {
     </>
   );
 }
+// things to do next Add social media link buuttons to navbar at align-left
