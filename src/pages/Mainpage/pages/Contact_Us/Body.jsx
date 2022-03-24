@@ -16,17 +16,13 @@ export default function Body() {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <Grid container spacing={2}>
-        <Grid item xs={8}>
-          <Item>xs=8 contact us</Item>
-        </Grid>
-        <Grid item xs={4}>
-          <Item>xs=4</Item>
-        </Grid>
-        <Grid item xs={4}>
-          <Item>xs=4</Item>
-        </Grid>
-        <Grid item xs={8}>
-          <Item>xs=8</Item>
+        <Grid item xs={12}>
+          <Item>
+            <h1>联系我们</h1>
+            <p>
+              6011-10080862 <br /> lifelongeducation333@gmail.com
+            </p>
+          </Item>
         </Grid>
       </Grid>
     </Box>

@@ -14,7 +14,7 @@ export default function Navbar(props) {
         spacing={1}
       >
         {props.pages.map((item, index) => (
-          <MenuItem bool={true} key={index}>
+          <MenuItem bool="true" key={index}>
             <NavLink
               key={index}
               to={item.link}
