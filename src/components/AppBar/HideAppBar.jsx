@@ -9,6 +9,19 @@ import Slide from "@material-ui/core/Slide";
 import Box from "@material-ui/core/Box";
 import { NavLink } from "react-router-dom";
 import Grid from "@mui/material/Grid";
+import Divider from "@mui/material/Divider";
+import Paper from "@mui/material/Paper";
+import Stack from "@mui/material/Stack";
+import { styled } from "@mui/material/styles";
+
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: "#ffb74d",
+  ...theme.typography.body2,
+  padding: theme.spacing(0.5),
+  textAlign: "center",
+  color: theme.palette.text.primary
+}));
+
 function HideOnScroll(props) {
   const { children, window } = props;
   // Note that you normally won't need to set the window ref as useScrollTrigger
@@ -74,34 +87,28 @@ export default function HideAppBar(props) {
                 </Box>
               </Grid>
               <Grid item xs={10}>
-                {props.somProp.map((item, index) => (
-                  <>
-                    <Grid
-                      item
-                      xs={4}
-                      sx={{
-                        p: 1,
-                        ml: 3,
-                        mr: 3,
-                        display: "inline-flex",
-                        flexDirection: "row",
-                        justifyContent: "flex-end",
-                        alignItems: "center",
-                        alignSelf: "center"
-                      }}
-                      onClick={preventDefault}
-                    >
-                      <NavLink
-                        to={item.link}
-                        style={(isActive) => ({
-                          color: "inherit"
-                        })}
-                      >
-                        {item.name}
-                      </NavLink>
-                    </Grid>
-                  </>
-                ))}
+                <Stack
+                  direction="row"
+                  justifyContent="space-evenly"
+                  alignItems="center"
+                  spacing={0}
+                >
+                  {props.somProp.map((item, index) => (
+                    <>
+                      <Item>
+                        <NavLink
+                          to={item.link}
+                          style={(isActive) => ({
+                            color: "inherit",
+                            textDecoration: "none"
+                          })}
+                        >
+                          {item.name}
+                        </NavLink>
+                      </Item>
+                    </>
+                  ))}
+                </Stack>
               </Grid>
             </Grid>
           </Toolbar>
