@@ -10,59 +10,61 @@ const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   textAlign: "center",
   borderRadius: 12,
-  color: theme.palette.text.secondary
+  color: theme.palette.text.secondary,
 }));
 const allcourses = [
   {
-    title: "高二 化学（中）",
+    title: "高一 电机（中）",
     link: "#",
     image: "https://i.pravatar.cc/300",
-    time: "none"
+    time: "none",
   },
 
   {
     title: "高二 化学（中）",
     link: "#",
     image: "https://i.pravatar.cc/300",
-    time: "none"
+    time: "none",
   },
   {
     title: "高二 化学（中）",
     link: "#",
     image: "https://i.pravatar.cc/300",
-    time: "none"
+    time: "none",
   },
   {
     title: "高二 化学（中）",
     link: "#",
     image: "https://i.pravatar.cc/300",
-    time: "none"
+    time: "none",
   },
   {
     title: "高二 化学（中）",
     link: "#",
     image: "https://i.pravatar.cc/300",
-    time: "none"
+    time: "none",
   },
   {
     title: "高二 化学（中）",
     link: "#",
     image: "https://i.pravatar.cc/300",
-    time: "none"
+    time: "none",
   },
   {
     title: "高二 化学（中）",
     link: "#",
     image: "https://i.pravatar.cc/300",
-    time: "none"
+    time: "none",
   },
   {
     title: "高二 化学（中）",
     link: "#",
     image: "https://i.pravatar.cc/300",
-    time: "none"
-  }
+    time: "none",
+  },
 ];
+const redirectToLink = "../CourseInfo";
+
 export default function Body() {
   return (
     <Box sx={{ flexGrow: 1, marginLeft: 1 }}>
@@ -84,6 +86,7 @@ export default function Body() {
                 link={item.link}
                 image={item.image}
                 time={item.time}
+                redirectTo={redirectToLink}
               />
             </Item>
           </Grid>

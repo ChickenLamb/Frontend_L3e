@@ -9,6 +9,15 @@ import AboutUs from "./pages/Mainpage/pages/About_Us/Body";
 import ContactUs from "./pages/Mainpage/pages/Contact_Us/Body";
 import Login from "./pages/Mainpage/pages/Login/Body";
 import OurCourses from "./pages/Mainpage/pages/Our_Courses/Body";
+
+import CourseInfo from "./pages/CourseInfo/Body";
+//AdminNavBar
+import UserInfo from "./pages/Admin/UserInformation/Body";
+import CreateClassroom from "./pages/Admin/CreateClassroom/Body";
+import EditClassroom from "./pages/Admin/EditClassroom/Body";
+import AnnouncementSetting from "./pages/Admin/AnnouncementSetting/Body";
+import PromotionSetting from "./pages/Admin/PromotionSetting/Body";
+import Report from "./pages/Admin/Report/Body";
 //default
 import logo from "./assets/logo.png";
 import "./styles.css";
@@ -16,6 +25,35 @@ import CssBaseline from "@material-ui/core/CssBaseline";
 import HideAppBar from "./components/AppBar/HideAppBar";
 import Navbar from "./components/Mainpage_Appbar/Navbar";
 import { Routes, Route } from "react-router-dom";
+import React from 'react';
+import {Link} from 'react-router-dom';
+
+const adminPages = [
+  {
+    name: "用戶資料/激活狀態",
+    link: "UserInfo"
+  },
+  {
+    name: "教室",
+    link: "CreateClassroom"
+  }
+  ,
+  {
+    name: "設置通知管理",
+    link: "AnnouncementSetting"
+  }
+  ,
+  {
+    name: "優惠設置",
+    link: "PromotionSetting"
+  }
+  ,
+  {
+    name: "報告",
+    link: "Report"
+  }
+];
+
 const pages = [
   {
     name: "首頁",
@@ -63,7 +101,8 @@ export default function App() {
     <>
       <CssBaseline />
       <nav>
-        <HideAppBar somProp={pages} logo={logo} logoTitle="L3Education" />
+        <HideAppBar somProp={adminPages} logo={logo} logoTitle="L3Education" />
+        {/* <HideAppBar somProp={pages} logo={logo} logoTitle="L3Education" /> */}
         <Navbar pages={mainpages} />
       </nav>
       <Routes>
@@ -77,7 +116,16 @@ export default function App() {
         <Route path="Contact_Us" element={<ContactUs />} />
         <Route path="Our_Courses" element={<OurCourses />} />
         <Route path="Login" element={<Login />} />
+        <Route path="UserInfo" element={<UserInfo />} />
+        <Route path="CreateClassroom" element={<CreateClassroom />} />
+        <Route path="EditClassroom" element={<EditClassroom />} />
+        <Route path="AnnouncementSetting" element={<AnnouncementSetting />} />
+        <Route path="PromotionSetting" element={<PromotionSetting />} />
+        <Route path="Report" element={<Report />} />
+        <Route path="CourseInfo" element={<CourseInfo />} />
       </Routes>
+   
+    
     </>
   );
 }

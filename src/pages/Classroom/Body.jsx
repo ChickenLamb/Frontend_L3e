@@ -4,68 +4,71 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import Classcard from "./components/Classcard";
+import { useNavigate } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: "center",
-  color: theme.palette.text.secondary
+  color: theme.palette.text.secondary,
 }));
 
 const mycourses = [
   {
     title: "高二 化学（中）",
     link: "#",
-    time: "1730"
+    time: "1730",
   },
 
   {
     title: "高二 化学（中）",
     link: "#",
-    time: "none"
+    time: "none",
   },
   {
     title: "高二 化学（中）",
     link: "#",
-    time: "none"
+    time: "none",
   },
   {
     title: "高二 化学（中）",
     link: "#",
-    time: "none"
+    time: "none",
   },
   {
     title: "高二 化学（中）",
     link: "#",
-    time: "none"
+    time: "none",
   },
   {
     title: "高二 化学（中）",
     link: "#",
-    time: "none"
+    time: "none",
   },
   {
     title: "高二 化学（中）",
     link: "#",
-    time: "none"
+    time: "none",
   },
   {
     title: "高二 化学（中）",
     link: "#",
-    time: "none"
+    time: "none",
   },
   {
     title: "高二 化学（中）",
     link: "#",
-    time: "none"
+    time: "none",
   },
   {
     title: "高二 化学（中）",
     link: "#",
-    time: "none"
-  }
+    time: "none",
+  },
 ];
+
+const redirectToLink = "../CourseInfo";
 
 export default function Body() {
   return (
@@ -80,6 +83,7 @@ export default function Body() {
             <Classcard
               title={item.title}
               link={item.link}
+              redirectTo={redirectToLink}
               time={item.time}
               image="https://i.pravatar.cc/300"
             />
