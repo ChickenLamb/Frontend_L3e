@@ -17,7 +17,7 @@ export default function AnnouncementSetting() {
             padding: "15px",
             width: "100%",
             border: "13px solid #5465f7",
-            borderRadius:10,
+            borderRadius: 10,
             color: "158, 110, 255",
           }}
         >
@@ -25,11 +25,11 @@ export default function AnnouncementSetting() {
           設置通知管理{" "}
         </h1>
       </Grid>
-      <Grid item xs={8} sx={{boxShadow:7}}>
+      <Grid item xs={8} sx={{ boxShadow: 0 }}>
         <AnnouncementBoard />
       </Grid>
-      <Grid item xs={4} sx={{boxShadow:7}}>
-      <AnnouncementHistoryBoard />
+      <Grid item xs={4} sx={{ boxShadow: 0 }}>
+        <AnnouncementHistoryBoard />
       </Grid>
     </Grid>
   );

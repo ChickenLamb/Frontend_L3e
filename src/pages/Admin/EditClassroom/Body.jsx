@@ -8,11 +8,17 @@ import Button from "@mui/material/Button";
 import EditDataCard from "./components/EditDataCard";
 import Box from "@mui/material/Box";
 import ManageClassroom from "./components/ManageClassroom";
-import Accordion from '@mui/material/Accordion';
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import TextField from "@mui/material/TextField";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -73,7 +79,6 @@ export default function Body() {
     },
   };
 
-
   return (
     <div>
       <h1
@@ -83,29 +88,19 @@ export default function Body() {
           padding: "15px",
           border: "13px solid #5465f7",
           color: "158, 110, 255",
-          borderRadius:10,
+          borderRadius: 10,
         }}
       >
         {" "}
         修改教室设定{" "}
       </h1>
-      <Item sx={{ boxShadow: 7 }}>
-        <div style={{ display: "flex" }}>
-          <Button
-            style={{ marginRight: "auto" }}
-            onClick={() => Redirect(RedirectTo.Back)}
-          >
-            <ArrowBackIosIcon>Go back</ArrowBackIosIcon>
-          </Button>
-        </div>
-      </Item>
 
       <Box
         sx={{
           flexGrow: 1,
           marginTop: 5,
-          marginLeft: 5,
-          marginRight: 5,
+          marginLeft: 2,
+          marginRight: 2,
           border: 0,
         }}
       >
@@ -117,37 +112,31 @@ export default function Body() {
           {controls.map((item, index) => (
             <EditDataCard item={item} />
           ))}
-
-          <Grid sx={{ margin: 3, width: "30%", border: 0 }}>
-            <Button
-              sx={{
-                marginLeft: "35%",
-                marginRight: "35%",
-                width: "30%",
-                border: 1,
-                borderColor: "purple",
-                boxShadow: 7,
-              }}
-              onClick={() => Redirect(RedirectTo.Back, true)}
-            >
-              确认
-            </Button>
-          </Grid>
         </Grid>
       </Box>
 
-     <Accordion sx={{ width: 1 ,border:1, marginTop:5,marginBottom:5, boxShadow:10}}>
+      <Accordion
+        sx={{
+          width: 1,
+          border: 1,
+          marginTop: 5,
+          marginBottom: 5,
+          boxShadow: 10,
+        }}
+      >
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography sx={{  mx: "auto" }} style={{color: "158, 110, 255"}}>教室管理</Typography>
+          <Typography sx={{ mx: "auto" }} style={{ color: "158, 110, 255" }}>
+            教室管理
+          </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <ManageClassroom />
         </AccordionDetails>
       </Accordion>
-      </div>
+    </div>
   );
 }

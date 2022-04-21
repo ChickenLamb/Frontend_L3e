@@ -102,6 +102,7 @@ export default function App() {
       <CssBaseline />
       <nav>
         <HideAppBar somProp={adminPages} logo={logo} logoTitle="L3Education" />
+            {/* test */}
         {/* <HideAppBar somProp={pages} logo={logo} logoTitle="L3Education" /> */}
         <Navbar pages={mainpages} />
       </nav>
@@ -118,7 +119,7 @@ export default function App() {
         <Route path="Login" element={<Login />} />
         <Route path="UserInfo" element={<UserInfo />} />
         <Route path="CreateClassroom" element={<CreateClassroom />} />
-        <Route path="EditClassroom" element={<EditClassroom />} />
+    
         <Route path="AnnouncementSetting" element={<AnnouncementSetting />} />
         <Route path="PromotionSetting" element={<PromotionSetting />} />
         <Route path="Report" element={<Report />} />

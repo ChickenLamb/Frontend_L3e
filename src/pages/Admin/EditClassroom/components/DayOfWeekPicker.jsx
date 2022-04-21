@@ -75,7 +75,7 @@ export default function DayOfWeekPicker(props) {
           value={days}
           onChange={handleChange}
           exclusive
-          sx={{ marginLeft: "10%", marginRight: "10%", width: "80%" }}
+          sx={{ marginLeft: "5%", marginRight: "5%", width: "80%" }}
         >
           {DAYS.map((day, index) => (
             <ToggleButton

@@ -24,8 +24,7 @@ export default function PromotionSettingBoard() {
   const depositedAmount = "";
 
   const handleAmount = (evt) => {
-    if (rx_live.test(evt.target.value))
-      setValue(evt.target.value );
+    if (rx_live.test(evt.target.value)) setValue(evt.target.value);
   };
 
   const classes = useStyles();
@@ -34,15 +33,20 @@ export default function PromotionSettingBoard() {
       <Grid item xs={12} sx={{ border: 1, width: 1 }}>
         <Typography align="center"> 優惠</Typography>
       </Grid>
-      <Grid item xs={4} sx={{ border: 1 }}>
+      <Grid item xs={3} sx={{ border: 1 }}>
         {" "}
         <Typography align="center"> 設置優惠碼</Typography>
       </Grid>
-      <Grid item xs={8} sx={{ border: 1 }}>
+      <Grid item xs={6} sx={{ border: 1 }}>
         {" "}
         <Typography align="center"> 設置優惠期限</Typography>
       </Grid>
-      <Grid item xs={4} sx={{ border: 1 }}>
+
+      <Grid item xs={3} sx={{ border: 1 }}>
+        {" "}
+        <Typography align="center"> 課程</Typography>
+      </Grid>
+      <Grid item xs={3} sx={{ border: 1 }}>
         <TextField
           placeholder="點擊輸入優惠碼"
           sx={{ border: 0, margin: "auto" }}
@@ -50,22 +54,29 @@ export default function PromotionSettingBoard() {
           InputProps={{ classes: { input: classes.input } }}
         />
       </Grid>
-      <Grid item xs={3.5} sx={{ border: 1 }}>
+      <Grid item xs={2.5} sx={{ border: 1 }}>
         <TextField fullWidth type="date"></TextField>
       </Grid>
       <Grid item xs={1} sx={{ border: 1 }}>
         <Typography align="center"> 截止至</Typography>
       </Grid>
-      <Grid item xs={3.5} sx={{ border: 1 }}>
+      <Grid item xs={2.5} sx={{ border: 1 }}>
         <TextField fullWidth type="date"></TextField>
       </Grid>
-      <Grid item xs={12} sx={{ border: 1, width: 1 }}>
+      <Grid item xs={3} sx={{ border: 1 }}></Grid>
+      <Grid item xs={9} sx={{ border: 1, width: 1 }}>
         <Typography align="center"> 優惠額度</Typography>
       </Grid>
-      <Grid item xs={4} sx={{ border: 1, width: 1 }}>
-        <Typography align="center"  sx={{marginTop:"3%"}}> RM</Typography>
+      <Grid item xs={3} sx={{ border: 1, width: 1 }}>
+        <Button fullWidth>選擇課程</Button>
       </Grid>
-      <Grid item xs={4.5} sx={{ border: 1, width: 1 }}>
+      <Grid item xs={3} sx={{ border: 1, width: 1 }}>
+        <Typography align="center" sx={{ marginTop: "3%" }}>
+          {" "}
+          RM
+        </Typography>
+      </Grid>
+      <Grid item xs={6} sx={{ border: 1, width: 1 }}>
         <TextField
           placeholder="點擊輸入優惠金額"
           sx={{ border: 0, margin: "auto" }}
@@ -76,7 +87,7 @@ export default function PromotionSettingBoard() {
           onChange={handleAmount}
         />
       </Grid>
-      <Grid item xs={3.5} sx={{ border: 1, width: 1 }}>
+      <Grid item xs={3} sx={{ border: 1, width: 1 }}>
         <Button fullWidth>確認</Button>
       </Grid>
     </Grid>

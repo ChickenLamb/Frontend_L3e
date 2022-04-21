@@ -16,6 +16,13 @@ import ClassroomEdit from "../../EditClassroom/Body";
 import Button from "@mui/material/Button";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import EditClassroom from "../../EditClassroom/Body";
+import Dialog from "@mui/material/Dialog";
+import DialogActions from "@mui/material/DialogActions";
+import DialogContent from "@mui/material/DialogContent";
+import DialogContentText from "@mui/material/DialogContentText";
+import DialogTitle from "@mui/material/DialogTitle";
+import TextField from "@mui/material/TextField";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -25,7 +32,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
   marginBottom: 5,
   marginRight: 6,
-  boxShadow:7
+  boxShadow: 7,
 }));
 
 const rows = [createData(1, "初二 (概念科）"), createData(2, "OOP")];
@@ -40,6 +47,15 @@ function createData(id, classroom) {
 export default function ClassroomBrowse() {
   const [list, setList] = React.useState(rows);
   const [data, setData] = React.useState();
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const handleAdd = () => {
     setList([
@@ -49,6 +65,7 @@ export default function ClassroomBrowse() {
         classroom: "abc",
       },
     ]);
+    setOpen(true);
   };
 
   const navigate = useNavigate();
@@ -62,7 +79,7 @@ export default function ClassroomBrowse() {
       {list.map((item) => (
         <div style={{ display: "flex" }}>
           <li key={item.id}>{item.classroom} </li>
-          <Button style={{ marginLeft: "auto" }} onClick={handleEdit}>
+          <Button style={{ marginLeft: "auto" }} onClick={handleClickOpen}>
             <EditBoxIcon />
             修改/ 查看
           </Button>
@@ -73,7 +90,7 @@ export default function ClassroomBrowse() {
 
   return (
     <div>
-      <Item sx={{boxShadow:7}}>
+      <Item sx={{ boxShadow: 7 }}>
         <div style={{ display: "flex" }}>
           <Button style={{ marginRight: "auto" }} onClick={handleAdd}>
             {" "}
@@ -81,10 +98,26 @@ export default function ClassroomBrowse() {
             开设教室
           </Button>
         </div>
-      </Item >
+      </Item>
       <div>
         <List list={list} />
       </div>
+      <Dialog
+        open={open}
+        onClose={handleClose}
+        PaperProps={{ sx: { width: "90%", border: 1, height: "80%" } }}
+        fullScreen={true}
+      >
+        <DialogTitle>設置/修改教室设定</DialogTitle>
+
+        <DialogContent>
+          <EditClassroom />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>取消</Button>
+          <Button onClick={handleClose}>確認</Button>
+        </DialogActions>
+      </Dialog>
     </div>
   );
 }

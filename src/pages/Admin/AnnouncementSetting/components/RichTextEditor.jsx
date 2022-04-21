@@ -19,15 +19,17 @@ export default function App() {
     //       />
     //     </div>
     //   </div>
-    <Grid
-      sx={{
-        minHeight: "400px",
-        border: 1,
-        marginLeft: "-1.7%",
-        marginTop: "-2%",
-      }}
-    >
-      <Editor editorState={editorState} onEditorStateChange={setEditorState} />
-    </Grid>
+    // <Grid
+    //   sx={{
+    //     minHeight: "400px",
+    //     border: 1,
+    //     marginLeft: "-1.7%",
+    //     marginTop: "-2%",
+    //   }}
+    // >
+    //   <Editor editorState={editorState} onEditorStateChange={setEditorState} />
+    // </Grid>
+
+    <Editor editorState={editorState} onEditorStateChange={setEditorState} />
   );
 }
