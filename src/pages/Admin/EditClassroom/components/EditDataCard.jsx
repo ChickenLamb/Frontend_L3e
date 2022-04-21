@@ -76,22 +76,24 @@ export default function EditDataCard({ item }) {
     </TextField>
   );
 
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
     <Grid item xs={3} sm={4} md={4} key={item.fieldName}>
-      <Card sx={{ minWidth: 10, boxShadow: 7 }}>
+      <Card sx={{ minWidth: 12, boxShadow: 7 }}>
         <CardContent>
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
             {uiControl}
             <Grid>
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <h1>{item.displayName}</h1>
-              </div>
+              <Typography align="center">{item.displayName}</Typography>
               {uiTextField}
             </Grid>
           </Typography>
